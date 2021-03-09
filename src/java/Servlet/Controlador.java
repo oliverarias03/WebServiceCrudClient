@@ -43,11 +43,11 @@ public class Controlador extends HttpServlet {
         if(accion.equals("add")){
             acceso = add;
         }else if(accion.equals("Guardar")){
-            int matricula = Integer.parseInt(request.getParameter("txt_matricula"));
+            int matricula = Integer.parseInt(request.getParameter("txt_matricula") == "" ? "0" : request.getParameter("txt_matricula"));
             String nombre = request.getParameter("txt_nombre");
             String apellido = request.getParameter("txt_apellidos");
-            int edad = Integer.parseInt(request.getParameter("txt_edad"));
-            String sexo = request.getParameter("txt_sexo");
+            int edad = Integer.parseInt(request.getParameter("txt_edad") == "" ? "0" : request.getParameter("txt_edad"));
+            String sexo = request.getParameter("radios");
             String contrasena = request.getParameter("txt_contrasena");
             String carrera = request.getParameter("txt_carrera");
             
@@ -65,8 +65,8 @@ public class Controlador extends HttpServlet {
             int matricula = Integer.parseInt(request.getParameter("txt_matricula"));
             String nombre = request.getParameter("txt_nombre");
             String apellido = request.getParameter("txt_apellidos");
-            int edad = Integer.parseInt(request.getParameter("txt_edad"));
-            String sexo = request.getParameter("txt_sexo");
+            int edad = Integer.parseInt(request.getParameter("txt_edad") == "" ? "0" : request.getParameter("txt_edad"));
+            String sexo = request.getParameter("radios");
             String contrasena = request.getParameter("txt_contrasena");
             String carrera = request.getParameter("txt_carrera");
             

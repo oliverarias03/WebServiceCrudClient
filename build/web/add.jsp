@@ -16,27 +16,30 @@
         <div class="container mt-4">
             <div class="card">
                 <div class="card-header">
-                    <h5>Agregar Nuevo Estudiante</h5>
+                    <h5>Agregar Nuevo Estudiante <a href="Controlador?accion=index" class="float-right btn btn-outline-secondary">Cancelar</a></h5>
                 </div>
                 <div class="card-body">
                     <form action="Controlador">
                         <label>Matricula</label>
-                        <input type="number" name="txt_matricula" class="form-control">
+                        <input type="number" placeholder="number" name="txt_matricula" class="form-control mb-1">
                         <label>Nombre</label>
-                        <input type="text" name="txt_nombre" class="form-control">
+                        <input type="text" placeholder="text" name="txt_nombre" class="form-control mb-1">
                         <label>Apellidos</label>
-                        <input type="text" name="txt_apellidos" class="form-control">
+                        <input type="text" placeholder="text" name="txt_apellidos" class="form-control mb-1">
                         <label>Edad</label>
-                        <input type="number" name="txt_edad" class="form-control">
+                        <input type="number"  placeholder="number" name="txt_edad" class="form-control mb-1">
                         <label>Sexo</label>
-                        <input type="text" name="txt_sexo" class="form-control">
+                        <br>
+<!--                        <input type="text" name="txt_sexo" class="form-control mb-1">-->
+                        <INPUT TYPE="radio" NAME="radios" VALUE="M" CHECKED> M
+                        <INPUT TYPE="radio" NAME="radios" VALUE="F" class="mb-2"> F
+                        <br>
                         <label>Contraseña</label>
-                        <input type="text" name="txt_contrasena" class="form-control">
+                        <input type="password" placeholder="text" name="txt_contrasena" class="form-control mb-1">
                         <label>Carrera</label>
-                        <input type="text" name="txt_carrera" class="form-control">
+                        <input type="text" placeholder="text" name="txt_carrera" class="form-control mb-3">
 
-                        <input type="submit" name="accion" value="Guardar" class="btn btn-secondary">
-                        <a href="Controlador?accion=index">Regresar</a>
+                        <input type="submit" name="accion" value="Guardar" class="btn btn-outline-info">
                     </form>
                 </div>
             </div>

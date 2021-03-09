@@ -13,13 +13,15 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
         <title>JSP Page</title>
     </head>
     <body>
         <div class="container mt-4">
             <div class="card">
                 <div class="card-header text-white">
-                    <a href="Controlador?accion=add" class="btn btn-primary">Agregar Nuevo Estudiante</a>
+                    <a href="Controlador?accion=add" class="btn btn-outline-primary" data-toggle="tooltip" data-placement="top" title="Agregar Nuevo"
+                       ><i class="fa fa-user-plus fa-2x"></i></a>
                 </div>
                 <div class="card-body">
                     <table class="table table-hover">
@@ -30,7 +32,7 @@
                                 <th>Apellido</th>
                                 <th>Edad</th>
                                 <th>Sexo</th>
-                                <th>Contraseña</th>
+                                <!--<th>Contraseña</th>-->
                                 <th>Carrera</th>
                                 <th>Acciones</th>
                             </tr>
@@ -48,11 +50,14 @@
                                 <td><%= u.getApellido()%></td>
                                 <td><%= u.getEdad()%></td>
                                 <td><%= u.getSexo()%></td>
-                                <td><%= u.getContrasena()%></td>
+                                <!--<td><%= u.getContrasena()%></td>-->
                                 <td><%= u.getCarrera()%></td>
                                 <td>
-                                    <a href="Controlador?accion=editar&matricula=<%= u.getMatricula() %>" class="btn btn-warning">Editar</a>
-                                    <a href="Controlador?accion=eliminar&matricula=<%= u.getMatricula() %>" class="btn btn-danger">Eliminar</a>
+                                    <a href="Controlador?accion=editar&matricula=<%= u.getMatricula() %>" 
+                                       class="btn btn-outline-warning mr-1" data-toggle="tooltip" data-placement="top" title="Editar"><i class="fa fa-edit fa-2x"></i></a>
+                                       
+                                    <a href="Controlador?accion=eliminar&matricula=<%= u.getMatricula() %>" 
+                                       class="btn btn-outline-danger" data-toggle="tooltip" data-placement="top" title="Eliminar"><i class="fa fa-trash fa-2x"></i></a>
                                 </td>
                             </tr>
                             <%
